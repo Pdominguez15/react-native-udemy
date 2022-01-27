@@ -1,5 +1,6 @@
 import {StackScreenProps} from '@react-navigation/stack';
 import React from 'react';
+import Icon from 'react-native-vector-icons/Ionicons';
 import {View, Text, Button} from 'react-native';
 import {TouchableOpacity} from 'react-native-gesture-handler';
 import {styles} from '../theme/appTheme';
@@ -17,7 +18,9 @@ export const Pagina1Screen = ({navigation}: Props) => {
         }}
       />
 
-      <Text>Navegar con argumentos </Text>
+      <Text style={{marginVertical: 20, fontSize: 20}}>
+        Navegar con argumentos{' '}
+      </Text>
 
       <View style={{flexDirection: 'row'}}>
         <TouchableOpacity
@@ -25,14 +28,16 @@ export const Pagina1Screen = ({navigation}: Props) => {
           onPress={() => {
             navigation.navigate('PersonaScreen', {id: 1, nombre: 'Pedro'});
           }}>
-          <Text>Pedro</Text>
+          <Icon name="body-outline" size={35} color="white" />
+          <Text style={{...styles.botonGrandeTexto}}>Pedro</Text>
         </TouchableOpacity>
         <TouchableOpacity
           style={{...styles.botonGrande, backgroundColor: '#FF9427'}}
           onPress={() => {
             navigation.navigate('PersonaScreen', {id: 2, nombre: 'Maria'});
           }}>
-          <Text>Maria</Text>
+          <Icon name="woman-outline" size={35} color="white" />
+          <Text style={{...styles.botonGrandeTexto}}>Maria</Text>
         </TouchableOpacity>
       </View>
     </View>

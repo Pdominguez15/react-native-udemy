@@ -1,5 +1,9 @@
 import {StyleSheet} from 'react-native';
 
+export const colores = {
+  primary: '#5856D6',
+};
+
 export const styles = StyleSheet.create({
   globalMargin: {
     marginHorizontal: 20,
@@ -16,7 +20,6 @@ export const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     marginRight: 10,
-    marginTop: 10,
   },
   botonGrandeTexto: {
     color: 'white',
@@ -25,6 +28,7 @@ export const styles = StyleSheet.create({
   },
   avatarContainer: {
     alignItems: 'center',
+    marginTop: 20,
   },
   avatar: {
     width: 150,

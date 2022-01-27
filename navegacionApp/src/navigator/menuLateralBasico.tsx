@@ -1,7 +1,7 @@
 import React from 'react';
 
 import {createDrawerNavigator} from '@react-navigation/drawer';
-import {SettingsScreen} from '../screens/Settings';
+import {SettingsScreen} from '../screens/SettingsScreen';
 import {StackNavigator} from './StackNavigator';
 import {useWindowDimensions} from 'react-native';
 
@@ -23,7 +23,9 @@ export const MenuLateralBasico = () => {
       />
       <Drawer.Screen
         name="SettingsScreen"
-        options={{title: 'Settings'}}
+        options={{
+          title: 'Settings',
+        }}
         component={SettingsScreen}
       />
     </Drawer.Navigator>
